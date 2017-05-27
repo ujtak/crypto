@@ -1,0 +1,9 @@
+.omakedb*
+*.omc
+*.cmi
+*.cmx
+*.o
+*.opt
+crypto
+tcp_server
+tcp_client
