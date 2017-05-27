@@ -89,15 +89,15 @@
 #
 # This project requires ocamlfind (default - false).
 #
-USE_OCAMLFIND = true
-
-OCAMLPACKS[] =
-
-
-if $(not $(OCAMLFIND_EXISTS))
-   eprintln(This project requires ocamlfind, but is was not found.)
-   eprintln(You need to install ocamlfind and run "omake --configure".)
-   exit 1
+# USE_OCAMLFIND = true
+#
+# OCAMLPACKS[] =
+#
+#
+# if $(not $(OCAMLFIND_EXISTS))
+#    eprintln(This project requires ocamlfind, but is was not found.)
+#    eprintln(You need to install ocamlfind and run "omake --configure".)
+#    exit 1
 
 #
 # Include path
@@ -115,12 +115,12 @@ if $(not $(OCAMLFIND_EXISTS))
 #
 # Various options
 #
-OCAMLFLAGS    += -thread
-OCAMLCFLAGS   +=
-OCAMLOPTFLAGS +=
-OCAML_LINK_FLAGS +=
-OCAML_BYTE_LINK_FLAGS +=
-OCAML_NATIVE_LINK_FLAGS +=
+# OCAMLFLAGS    +=
+# OCAMLCFLAGS   +=
+# OCAMLOPTFLAGS +=
+# OCAML_LINK_FLAGS +=
+# OCAML_BYTE_LINK_FLAGS +=
+# OCAML_NATIVE_LINK_FLAGS +=
 
 ################################################
 # Generated files
@@ -159,7 +159,7 @@ CLIENT[] =
 PROGRAM = crypto
 OCAML_LIBS +=
 OCAML_CLIBS +=
-OCAML_OTHER_LIBS += str unix nums
+OCAML_OTHER_LIBS += nums unix
 OCAML_LIB_FLAGS +=
 
 .DEFAULT: $(OCamlProgram $(PROGRAM), $(FILES))
